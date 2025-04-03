@@ -1,0 +1,1207 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Spotify clone</title>
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <link
+      rel="icon"
+      sizes="32x32"
+      type="image/png"
+      href="images/favicon-spotify.png"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="navbar-left">
+          <a href="#"
+            ><svg
+              fill="#000000"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              transform="matrix(-1, 0, 0, 1, 0, 0)"
+              width="32px"
+              height="32px"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <g>
+                    <rect
+                      width="24"
+                      height="24"
+                      transform="rotate(-90 12 12)"
+                      opacity="0"
+                    ></rect>
+                    <path
+                      d="M10 19a1 1 0 0 1-.64-.23 1 1 0 0 1-.13-1.41L13.71 12 9.39 6.63a1 1 0 0 1 .15-1.41 1 1 0 0 1 1.46.15l4.83 6a1 1 0 0 1 0 1.27l-5 6A1 1 0 0 1 10 19z"
+                    ></path>
+                  </g>
+                </g>
+              </g></svg
+          ></a>
+          <a href="#"
+            ><svg
+              fill="#000000"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              width="32px"
+              height="32px"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <g>
+                  <g>
+                    <rect
+                      width="24"
+                      height="24"
+                      transform="rotate(-90 12 12)"
+                      opacity="0"
+                    ></rect>
+                    <path
+                      d="M10 19a1 1 0 0 1-.64-.23 1 1 0 0 1-.13-1.41L13.71 12 9.39 6.63a1 1 0 0 1 .15-1.41 1 1 0 0 1 1.46.15l4.83 6a1 1 0 0 1 0 1.27l-5 6A1 1 0 0 1 10 19z"
+                    ></path>
+                  </g>
+                </g>
+              </g></svg
+          ></a>
+        </div>
+        <div class="navbar-middle">
+          <a href="#"
+            ><svg
+              id="home-icon"
+              role="img"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              width="60px"
+              height="60px"
+            >
+              <path
+                d="M12.5 3.247a1 1 0 0 0-1 0L4 7.577V20h4.5v-6a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v6H20V7.577l-7.5-4.33zm-2-1.732a3 3 0 0 1 3 0l7.5 4.33a2 2 0 0 1 1 1.732V21a1 1 0 0 1-1 1h-6.5a1 1 0 0 1-1-1v-6h-3v6a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.577a2 2 0 0 1 1-1.732l7.5-4.33z"
+              ></path></svg
+          ></a>
+          <div class="search-bar">
+            <label for="search-bar-field">
+              <svg
+                id="magnifying-glass"
+                class="search-bar-icons"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                width="25px"
+                height="25px"
+              >
+                <path
+                  d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                ></path>
+              </svg>
+            </label>
+            <input
+              type="search"
+              id="search-bar-field"
+              placeholder="What do you want to play?"
+            />
+            <label for="search-bar-field">
+              <svg
+                class="search-bar-icons"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                width="25px"
+                height="25px"
+              >
+                <path
+                  d="M15 15.5c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2z"
+                ></path>
+                <path
+                  d="M1.513 9.37A1 1 0 0 1 2.291 9h19.418a1 1 0 0 1 .979 1.208l-2.339 11a1 1 0 0 1-.978.792H4.63a1 1 0 0 1-.978-.792l-2.339-11a1 1 0 0 1 .201-.837zM3.525 11l1.913 9h13.123l1.913-9H3.525zM4 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4h-2V3H6v3H4V2z"
+                ></path>
+              </svg>
+            </label>
+          </div>
+        </div>
+        <div class="navbar-right">
+          <button
+            class="explore-premium-button"
+            id="explore-premium-button"
+            type="button"
+          >
+            Explore premium
+          </button>
+          <button class="notifications">
+            <svg
+              class="bell-icon"
+              role="img"
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+              width="20px"
+              height="20px"
+            >
+              <path
+                d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4zm-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569V5.5zm4.5 8a1 1 0 1 0 2 0H7z"
+              ></path>
+            </svg>
+          </button>
+          <div>
+            <img
+              src="images/friends.webp"
+              alt="toggle friends' activity dropdown"
+              width="32px"
+              height="32px"
+            />
+          </div>
+          <div>
+            <button class="dropdown-toggle" id="dropdown-toggle">
+              <img
+                src="images/user-photo.jpg"
+                alt="toggle the user options dropdown"
+                width="32px"
+                height="32px"
+              />
+            </button>
+            <ul class="user-dropdown-menu" id="user-dropdown-menu">
+              <li>
+                <a href="#">Account</a>
+                <svg
+                  role="img"
+                  aria-label="External link"
+                  aria-hidden="false"
+                  viewBox="0 0 16 16"
+                  width="32px"
+                  height="20px"
+                >
+                  <path
+                    d="M1 2.75A.75.75 0 0 1 1.75 2H7v1.5H2.5v11h10.219V9h1.5v6.25a.75.75 0 0 1-.75.75H1.75a.75.75 0 0 1-.75-.75V2.75z"
+                  ></path>
+                  <path
+                    d="M15 1v4.993a.75.75 0 1 1-1.5 0V3.56L8.78 8.28a.75.75 0 0 1-1.06-1.06l4.72-4.72h-2.433a.75.75 0 0 1 0-1.5H15z"
+                  ></path>
+                </svg>
+              </li>
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Upgrade to Premium</a></li>
+              <li><a href="#">Private session</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="main-content">
+      <aside class="left-sidebar">
+        <header>
+          <div class="sidebar-first-layer">
+            <div class="group1">
+              <svg
+                id="left-sidebar-library-icon"
+                role="img"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                width="25px"
+                height="25px"
+              >
+                <path
+                  d="M3 22a1 1 0 0 1-1-1V3a1 1 0 0 1 2 0v18a1 1 0 0 1-1 1zM15.5 2.134A1 1 0 0 0 14 3v18a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V6.464a1 1 0 0 0-.5-.866l-6-3.464zM9 2a1 1 0 0 0-1 1v18a1 1 0 1 0 2 0V3a1 1 0 0 0-1-1z"
+                ></path>
+              </svg>
+              <h2>Your Library</h2>
+            </div>
+            <div class="group2">
+              <button class="create-button">
+                <svg
+                  width="16px"
+                  height="16px"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g troke-width="0"></g>
+                  <g stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g>
+                    <path
+                      d="M4 12H20M12 4V20"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></path>
+                  </g>
+                </svg>
+              </button>
+              <ul class="create-dropdown">
+                <li>
+                  <div class="create-dropdown-item">
+                    <button id="create-icon-button">
+                      <svg
+                        role="img"
+                        aria-hidden="true"
+                        viewBox="0 0 24 24"
+                        width="30px"
+                        height="30px"
+                      >
+                        <path
+                          d="M3 8V5H0V3h3V0h2v3h3v2H5v3H3zm8-4c0 .34-.024.673-.07 1H19v9.667h-1.5a3.5 3.5 0 1 0 3.5 3.5V3H10.93c.046.327.07.66.07 1zm8 12.667v1.5a1.5 1.5 0 1 1-1.5-1.5H19zM6 10.71a6.972 6.972 0 0 0 2-.965v8.422a3.5 3.5 0 1 1-3.5-3.5H6V10.71zm0 5.957H4.5a1.5 1.5 0 1 0 1.5 1.5v-1.5z"
+                        ></path>
+                      </svg>
+                    </button>
+                    <div class="create-info">
+                      <div class="create-title">Playlist</div>
+                      <div class="create-description">
+                        Build a playlist with songs, or episodes
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="create-dropdown-item">
+                    <button id="create-icon-button">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30px"
+                        height="30px"
+                      >
+                        <circle
+                          cx="17.455"
+                          cy="8.727"
+                          r="8.727"
+                          opacity="0.5"
+                        ></circle>
+                        <circle
+                          cx="8.727"
+                          cy="15.273"
+                          r="8.727"
+                          opacity="0.3"
+                        ></circle>
+                        <path
+                          fill-rule="evenodd"
+                          d="M17.18 17.446a8.728 8.728 0 0 1-8.179-10.9 8.728 8.728 0 0 1 8.18 10.9Z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                    <div class="create-info">
+                      <div class="create-title">Blend</div>
+                      <div class="create-description">
+                        Mix up your tastes with friends
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="create-dropdown-item">
+                    <button id="create-icon-button">
+                      <svg role="img" aria-hidden="true" viewBox="0 0 24 24">
+                        <path
+                          d="M1 4a2 2 0 0 1 2-2h5.155a3 3 0 0 1 2.598 1.5l.866 1.5H21a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4zm7.155 0H3v16h18V7H10.464L9.021 4.5a1 1 0 0 0-.866-.5z"
+                          width="30px"
+                          height="30px"
+                        ></path>
+                      </svg>
+                    </button>
+                    <div class="create-info">
+                      <div class="create-title">Folder</div>
+                      <div class="create-description">
+                        Organize your playlists
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <button
+                title="expand left sidebar"
+                class="expand-left-sidebar-button"
+              >
+                <svg
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  style="width: 15px; height: 15px"
+                >
+                  <path
+                    d="M7.19 1A.749.749 0 0 1 8.47.47L16 7.99l-7.53 7.521a.75.75 0 0 1-1.234-.815.75.75 0 0 1 .174-.243l5.72-5.714H.75a.75.75 0 1 1 0-1.498h12.38L7.41 1.529a.749.749 0 0 1-.22-.53z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="sidebar-first-layer">
+            <button>Playlists</button>
+          </div>
+          <div class="sidebar-first-layer">
+            <div class="group1">
+              <button id="search-icon" aria-label="Open search bar">
+                <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+                  <path
+                    d="M7 1.75a5.25 5.25 0 1 0 0 10.5 5.25 5.25 0 0 0 0-10.5zM.25 7a6.75 6.75 0 1 1 12.096 4.12l3.184 3.185a.75.75 0 1 1-1.06 1.06L11.304 12.2A6.75 6.75 0 0 1 .25 7z"
+                    width="16px"
+                    height="16px"
+                  ></path>
+                </svg>
+              </button>
+              <input
+                type="search"
+                id="sidebar-search-bar-field"
+                placeholder="Search in your Library"
+                aria-label="Search"
+              />
+            </div>
+            <div class="playlist-filter-container">
+              <button class="group2" id="playlist-filter-dropdown-toggle">
+                <h3>Recents</h3>
+                <svg
+                  id="compact-svg"
+                  class="view-icon hidden"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  width="16px"
+                  height="16px"
+                >
+                  <path
+                    d="M15.5 13.5H.5V12h15v1.5zm0-4.75H.5v-1.5h15v1.5zm0-4.75H.5V2.5h15V4z"
+                  ></path>
+                </svg>
+                <svg
+                  id="list-svg"
+                  class="view-icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  width="16px"
+                  height="16px"
+                >
+                  <path
+                    d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"
+                  ></path>
+                </svg>
+                <svg
+                  id="grid-svg"
+                  class="view-icon hidden"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                  width="16px"
+                  height="16px"
+                >
+                  <path
+                    d="M1 1h6v6H1V1zm1.5 1.5v3h3v-3h-3zM1 9h6v6H1V9zm1.5 1.5v3h3v-3h-3zM9 1h6v6H9V1zm1.5 1.5v3h3v-3h-3zM9 9h6v6H9V9zm1.5 1.5v3h3v-3h-3z"
+                  ></path>
+                </svg>
+              </button>
+              <ul
+                class="playlist-filter-dropdown-menu"
+                id="playlist-filter-dropdown-menu"
+              >
+                <li><button class="sort-by-card">sort by</button></li>
+                <li class="active">
+                  <button>Recents</button>
+                  <svg
+                    id="selected-svg"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M15.53 2.47a.75.75 0 0 1 0 1.06L4.907 14.153.47 9.716a.75.75 0 0 1 1.06-1.06l3.377 3.376L14.47 2.47a.75.75 0 0 1 1.06 0z"
+                    ></path>
+                  </svg>
+                </li>
+                <li><button>Recently Added</button></li>
+                <li><button>Alphabetical</button></li>
+                <li><button>Creator</button></li>
+                <li><button class="select-view-card">View as</button></li>
+                <li class="list-view-option">
+                  <button class="playlist-view" data-view="compact">
+                    <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+                      <path
+                        d="M15.5 13.5H.5V12h15v1.5zm0-4.75H.5v-1.5h15v1.5zm0-4.75H.5V2.5h15V4z"
+                      ></path></svg
+                    >Compact
+                  </button>
+                  <svg class="selected-svg hidden">
+                    <use xlink:href="#selected-svg"></use>
+                  </svg>
+                </li>
+                <li class="list-view-option active">
+                  <button class="playlist-view" data-view="list">
+                    <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+                      <path
+                        d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"
+                      ></path>
+                    </svg>
+                    List
+                  </button>
+                  <svg class="selected-svg">
+                    <use xlink:href="#selected-svg"></use>
+                  </svg>
+                </li>
+                <li class="list-view-option">
+                  <button class="playlist-view" data-view="grid">
+                    <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+                      <path
+                        d="M1 1h6v6H1V1zm1.5 1.5v3h3v-3h-3zM1 9h6v6H1V9zm1.5 1.5v3h3v-3h-3zM9 1h6v6H9V1zm1.5 1.5v3h3v-3h-3zM9 9h6v6H9V9zm1.5 1.5v3h3v-3h-3z"
+                      ></path></svg
+                    >Grid
+                  </button>
+                  <svg class="selected-svg hidden">
+                    <use xlink:href="#selected-svg"></use>
+                  </svg>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="sidebar-second-layer list">
+            <ul>
+              <li class="active">
+                <div class="playlist-item" data-playlist-id="0">
+                  <div class="playlist-icon">
+                    <img
+                      src="images/liked.jpeg"
+                      alt="img"
+                      width="50px"
+                      height="50px"
+                    />
+                    <button class="playlist-play-button">
+                      <svg
+                        fill="#b3b3b3"
+                        version="1.1"
+                        id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 96.155 96.155"
+                        xml:space="preserve"
+                        stroke="#b3b3b3"
+                      >
+                        <g troke-width="0"></g>
+                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <g>
+                            <path
+                              d="M20.972,95.594l57.605-45.951c0.951-0.76,0.951-2.367,0-3.127L20.968,0.56c-0.689-0.547-1.716-0.709-2.61-0.414 c-0.186,0.061-0.33,0.129-0.436,0.186c-0.65,0.35-1.056,1.025-1.056,1.764v91.967c0,0.736,0.405,1.414,1.056,1.762 c0.109,0.06,0.253,0.127,0.426,0.185C19.251,96.305,20.281,96.144,20.972,95.594z"
+                            ></path>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="playlist-info">
+                    <h4 class="playlist-item-title">Liked Songs</h4>
+                    <p class="playlist-item-owner">Playlist &#8226; Nebulax</p>
+                  </div>
+                  <svg
+                    class="playlist-playing-icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M10.016 1.125A.75.75 0 0 0 8.99.85l-6.925 4a3.639 3.639 0 0 0 0 6.299l6.925 4a.75.75 0 0 0 1.125-.65v-13a.75.75 0 0 0-.1-.375zM11.5 5.56a2.75 2.75 0 0 1 0 4.88V5.56z"
+                    ></path>
+                    <path
+                      d="M16 8a5.752 5.752 0 0 1-4.5 5.614v-1.55a4.252 4.252 0 0 0 0-8.127v-1.55A5.752 5.752 0 0 1 16 8z"
+                    ></path>
+                  </svg>
+                </div>
+              </li>
+
+              <li>
+                <div class="playlist-item" data-playlist-id="1">
+                  <div class="playlist-icon">
+                    <button class="playlist-play-button">
+                      <svg
+                        fill="#b3b3b3"
+                        version="1.1"
+                        id="Capa_1"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        viewBox="0 0 96.155 96.155"
+                        xml:space="preserve"
+                        stroke="#b3b3b3"
+                      >
+                        <g troke-width="0"></g>
+                        <g stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                          <g>
+                            <path
+                              d="M20.972,95.594l57.605-45.951c0.951-0.76,0.951-2.367,0-3.127L20.968,0.56c-0.689-0.547-1.716-0.709-2.61-0.414 c-0.186,0.061-0.33,0.129-0.436,0.186c-0.65,0.35-1.056,1.025-1.056,1.764v91.967c0,0.736,0.405,1.414,1.056,1.762 c0.109,0.06,0.253,0.127,0.426,0.185C19.251,96.305,20.281,96.144,20.972,95.594z"
+                            ></path>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+
+                    <img
+                      src="images/playlist-covers/playlist-image-1.jpg"
+                      alt="img"
+                      width="50px"
+                      height="50px"
+                    />
+                  </div>
+                  <div class="playlist-info">
+                    <h4 class="playlist-item-title">Bangers only</h4>
+                    <p class="playlist-item-owner">Playlist &#8226; Nebulax</p>
+                  </div>
+                  <svg
+                    class="playlist-playing-icon"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      d="M10.016 1.125A.75.75 0 0 0 8.99.85l-6.925 4a3.639 3.639 0 0 0 0 6.299l6.925 4a.75.75 0 0 0 1.125-.65v-13a.75.75 0 0 0-.1-.375zM11.5 5.56a2.75 2.75 0 0 1 0 4.88V5.56z"
+                    ></path>
+                    <path
+                      d="M16 8a5.752 5.752 0 0 1-4.5 5.614v-1.55a4.252 4.252 0 0 0 0-8.127v-1.55A5.752 5.752 0 0 1 16 8z"
+                    ></path>
+                  </svg>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </header>
+      </aside>
+      <section class="content">
+        <header class="content-header">
+          <div class="wrapper">
+            <img
+              class="content-header-image"
+              src="images/liked.jpeg"
+              alt="playlist-image"
+              width="200px"
+              height="200px"
+            />
+            <div class="content-header-text-wrapper">
+              <div class="content-header-text">
+                <p>Playlist</p>
+                <span class="playlist-name"><h2>Liked Songs</h2></span>
+
+                <p>
+                  <a href="#" class="playlist-owner">Nebulax</a>
+                  &#8226; <span class="playlist-size">6</span> songs
+                </p>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="second-layer-wrapper">
+          <div class="content-upper-wrapper">
+            <div class="content-second-layer">
+              <div class="content-second-layer-group1">
+                <button class="play-button" data-current-playlist-Id="0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    width="34"
+                    height="34"
+                  >
+                    <path d="M8 5v14l11-7z" fill="#000" />
+                  </svg>
+                </button>
+                <button class="playlist-buttons">
+                  <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+                    <path
+                      d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"
+                    ></path>
+                    <path
+                      d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"
+                    ></path>
+                  </svg>
+                </button>
+                <button class="playlist-buttons">
+                  <svg
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 64 64"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g
+                      id="SVGRepo_tracerCarrier"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    ></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <path
+                        d="M31.67 3.50098C24.0687 3.50892 16.781 6.53205 11.406 11.907C6.03107 17.2819 3.00794 24.5697 3 32.171C3.00953 39.7705 6.03361 47.0559 11.4086 52.4282C16.7836 57.8006 24.0705 60.8212 31.67 60.827C39.2687 60.819 46.5538 57.797 51.9269 52.4239C57.3 47.0508 60.322 39.7656 60.33 32.167C60.321 24.5681 57.2988 17.2829 51.9261 11.9091C46.5534 6.53531 39.2689 3.51156 31.67 3.50098ZM41.78 41.327L32.79 47.317L32.78 47.327C32.4528 47.5499 32.0659 47.6684 31.67 47.667C31.2739 47.6699 30.8865 47.5512 30.56 47.327L30.39 47.207L21.56 41.327C21.1188 41.0336 20.812 40.5772 20.707 40.0578C20.602 39.5385 20.7074 38.9987 21 38.557C21.2956 38.1155 21.7537 37.8089 22.2746 37.7039C22.7954 37.599 23.3366 37.7044 23.78 37.997L29.67 41.927V18.667C29.6691 18.4041 29.7202 18.1436 29.8204 17.9005C29.9205 17.6574 30.0678 17.4366 30.2537 17.2507C30.4396 17.0648 30.6605 16.9175 30.9035 16.8173C31.1466 16.7172 31.4071 16.6661 31.67 16.667C32.2004 16.667 32.7091 16.8777 33.0842 17.2528C33.4593 17.6278 33.67 18.1365 33.67 18.667V41.927L39.56 37.997C40.0017 37.7044 40.5415 37.599 41.0608 37.704C41.5802 37.809 42.0366 38.1158 42.33 38.557C42.6236 38.9975 42.7305 39.5364 42.6274 40.0556C42.5243 40.5749 42.2196 41.032 41.78 41.327Z"
+                        fill="#999999"
+                      ></path>
+                    </g>
+                  </svg>
+                </button>
+              </div>
+              <div class="content-second-layer-group2">
+                <button class="playlist-filter-button">
+                  <svg
+                    id="magnifying-glass"
+                    class="search-bar-icons"
+                    role="img"
+                    aria-hidden="true"
+                    viewBox="0 0 24 24"
+                    width="25px"
+                    height="25px"
+                  >
+                    <path
+                      d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z"
+                    ></path>
+                  </svg>
+                </button>
+
+                <button class="playlist-filter-button">
+                  <p>Date added</p>
+                  <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+                    <path
+                      d="M15 14.5H5V13h10v1.5zm0-5.75H5v-1.5h10v1.5zM15 3H5V1.5h10V3zM3 3H1V1.5h2V3zm0 11.5H1V13h2v1.5zm0-5.75H1v-1.5h2v1.5z"
+                    ></path>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+          <section class="song-list">
+            <!-- Filter Bar -->
+            <div class="song-list-wrapper">
+              <div class="filter-bar">
+                <div>
+                  #
+                  <button>Title</button>
+                </div>
+
+                <button>Album</button>
+                <button>Date added</button>
+                <img
+                  src="images/duration-image.webp"
+                  alt="duration img"
+                  class="song-grid-4th-col"
+                />
+              </div>
+
+              <!-- Songs Grid -->
+              <div class="songs-grid">
+                <div class="song-item active">
+                  <div class="song-item-left">
+                    <div class="song-image-container">
+                      <img
+                        class="song-image"
+                        src="images/album-covers/for-all-the-dogs.jpg"
+                        alt="song image"
+                        width="40px"
+                        height="40px"
+                      />
+                      <button
+                        class="play-pause-song-button"
+                        data-song-index="0"
+                      >
+                        <svg
+                          id="before-song-image"
+                          role="img"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="song-item-info">
+                      <p class="song-title">Virginia Beach</p>
+                      🅴 <a href="#" class="song-performers">Drake</a>
+                    </div>
+                  </div>
+                  <a href="#">For All The Dogs</a>
+                  <p>March 23, 2024</p>
+                  <p class="song-grid-4th-col">4:11</p>
+                </div>
+                <div class="song-item">
+                  <div class="song-item-left">
+                    <div class="song-image-container">
+                      <img
+                        class="song-image"
+                        src="images/album-covers/certified-lover-boy.webp"
+                        alt="song image"
+                        width="40px"
+                        height="40px"
+                      />
+                      <button
+                        class="play-pause-song-button"
+                        data-song-index="1"
+                      >
+                        <svg
+                          id="before-song-image"
+                          role="img"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+
+                    <div class="song-item-info">
+                      <p class="song-title">Yebba's Heartbreak</p>
+                      🅴
+                      <span class="song-performers">
+                        <a href="#">Drake</a>,
+                        <a href="#">Yebba</a>
+                      </span>
+                    </div>
+                  </div>
+                  <a href="#">Certified Lover Boy</a>
+                  <p>Feb 20, 2025</p>
+                  <p class="song-grid-4th-col">2:13</p>
+                </div>
+                <div class="song-item">
+                  <div class="song-item-left">
+                    <div class="song-image-container">
+                      <img
+                        class="song-image"
+                        src="images/album-covers/Some_Sexy_Songs_4_U.png"
+                        alt="song image"
+                        width="40px"
+                        height="40px"
+                      />
+                      <button
+                        class="play-pause-song-button"
+                        data-song-index="2"
+                      >
+                        <svg
+                          id="before-song-image"
+                          role="img"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="song-item-info">
+                      <p class="song-title">Die Trying</p>
+                      🅴
+                      <span class="song-performers"
+                        ><a href="#">PARTYNEXTDOOR</a>,<a href="">Drake</a>,
+                        <a href="#">Yebba</a></span
+                      >
+                    </div>
+                  </div>
+                  <a href="#">Some Sexy Songs 4U</a>
+                  <p>March 17, 2025</p>
+                  <p class="song-grid-4th-col">3:15</p>
+                </div>
+                <div class="song-item">
+                  <div class="song-item-left">
+                    <div class="song-image-container">
+                      <img
+                        class="song-image"
+                        src="images/album-covers/Linkin_Park_Meteora_Album_Cover.jpg"
+                        alt="song image"
+                        width="40px"
+                        height="40px"
+                      />
+                      <button
+                        class="play-pause-song-button"
+                        data-song-index="3"
+                      >
+                        <svg
+                          id="before-song-image"
+                          role="img"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="song-item-info">
+                      <p class="song-title">Session</p>
+                      <a href="#" class="song-performers">Linkin Park</a>
+                    </div>
+                  </div>
+                  <a href="#">Meteora</a>
+                  <p>Nov 5, 2024</p>
+                  <p class="song-grid-4th-col">2:25</p>
+                </div>
+                <div class="song-item">
+                  <div class="song-item-left">
+                    <div class="song-image-container">
+                      <img
+                        class="song-image"
+                        src="images/album-covers/tron-legacy-cover.jpeg"
+                        alt="song image"
+                        width="40px"
+                        height="40px"
+                      />
+                      <button
+                        class="play-pause-song-button"
+                        data-song-index="4"
+                      >
+                        <svg
+                          id="before-song-image"
+                          role="img"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="song-item-info">
+                      <p class="song-title">End of Line</p>
+                      <a href="#" class="song-performers">Daft Punk</a>
+                    </div>
+                  </div>
+                  <a href="#">TRON: Legacy</a>
+                  <p>Oct 28, 2024</p>
+                  <p class="song-grid-4th-col">2:36</p>
+                </div>
+                <div class="song-item">
+                  <div class="song-item-left">
+                    <div class="song-image-container">
+                      <img
+                        class="song-image"
+                        src="images/album-covers/Lamb_of_God_-_VII_Sturm_und_Drang.jpg"
+                        alt="song image"
+                        width="40px"
+                        height="40px"
+                      />
+                      <button
+                        class="play-pause-song-button"
+                        data-song-index="5"
+                      >
+                        <svg
+                          id="before-song-image"
+                          role="img"
+                          aria-hidden="true"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            d="m7.05 3.606 13.49 7.788a.7.7 0 0 1 0 1.212L7.05 20.394A.7.7 0 0 1 6 19.788V4.212a.7.7 0 0 1 1.05-.606z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="song-item-info">
+                      <p class="song-title">512</p>
+                      🅴 <a class="song-performers" href="#">Lamb of God</a>
+                    </div>
+                  </div>
+
+                  <a href="#">VII:Sturm und Drang</a>
+                  <p>March 17, 2025</p>
+                  <p class="song-grid-4th-col">4:45</p>
+                </div>
+              </div>
+            </div>
+            <div class="song-list-shield"></div>
+          </section>
+        </div>
+      </section>
+      <aside class="right-sidebar">
+        <div class="right-sidebar-wrapper">
+          <div class="right-sidebar-header-container">
+            <div class="right-sidebar-header">
+              <h2>Liked Songs</h2>
+              <div class="right-sidebar-header-right">
+                <button>
+                  <img src="images/three-dots-svgrepo-com(1).svg" alt="" />
+                </button>
+                <button class="close-right-sidebar-button">
+                  <img src="images/x-symbol-svgrepo-com.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="song-card">
+            <img
+              class="song-card-cover"
+              src="images/album-covers/for-all-the-dogs.jpg"
+              alt="xxx"
+              width="300px"
+              height="300px"
+            />
+            <div class="song-card-footer">
+              <div class="song-card-info">
+                <h3><a class="song-card-title">Virginia Beach</a></h3>
+                <p><a class="song-card-performers" href="#">Drake</a></p>
+              </div>
+              <button>
+                <svg
+                  id="add-to-liked-icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M8 1.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z"
+                  ></path>
+                  <path
+                    d="M11.75 8a.75.75 0 0 1-.75.75H8.75V11a.75.75 0 0 1-1.5 0V8.75H5a.75.75 0 0 1 0-1.5h2.25V5a.75.75 0 0 1 1.5 0v2.25H11a.75.75 0 0 1 .75.75z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="other-right-sidebar-contents">
+            <div class="artist-card">
+              <figure>
+                <img
+                  class="artist-cover"
+                  src="/images/artist-images/drake.jpeg"
+                  alt="Drake"
+                  width="300px"
+                  height="300px"
+                />
+                <figcaption>About the artist</figcaption>
+              </figure>
+              <div class="artist-info">
+                <a href="#" class="artist-name">Drake</a>
+                <div>
+                  <div class="monthly-listeners">
+                    <p class="monthly-listeners-text">
+                      78,845,941 monthly listeners
+                    </p>
+                    <button>Follow</button>
+                  </div>
+
+                  <p class="artist-description">
+                    Canadian rapper and vocalist Drake has retained a
+                    bigger-than-life commercial presence shortly after he hit
+                    the scene in 2006, whether with his own chart-topping
+                    releases or with a long string of guest appearances on hits
+                    by the likes of
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="credits">
+              <div class="credits-header">Credits <a href="#">Show all</a></div>
+              <div class="credits-content"></div>
+            </div>
+            <div class="merch">
+              <h4>Merch</h4>
+              <div class="merch-content"></div>
+            </div>
+            <div class="next-in-queue">
+              <div class="next-in-queue-header">
+                <h4>Next in queue</h4>
+                <a href="#">Open queue</a>
+              </div>
+              <div class="next-in-queue-song">
+                <div class="image-container">
+                  <img
+                    class="next-in-queue-song-cover"
+                    src="images/album-covers/for-all-the-dogs.jpg"
+                    alt="Album Cover"
+                  />
+                  <button class="play-next-song-button">
+                    <svg class="play-icon" viewBox="0 0 96.155 96.155">
+                      <path
+                        d="M20.972,95.594l57.605-45.951c0.951-0.76,0.951-2.367,0-3.127L20.968,0.56c-0.689-0.547-1.716-0.709-2.61-0.414 c-0.186,0.061-0.33,0.129-0.436,0.186c-0.65,0.35-1.056,1.025-1.056,1.764v91.967c0,0.736,0.405,1.414,1.056,1.762 c0.109,0.06,0.253,0.127,0.426,0.185C19.251,96.305,20.281,96.144,20.972,95.594z"
+                        fill="white"
+                      ></path>
+                    </svg>
+                  </button>
+                </div>
+
+                <div>
+                  <p class="next-in-queue-song-title">
+                    Amen(feat.Teezo Touchdown)
+                  </p>
+                  <p class="next-in-queue-song-performers">
+                    <a href="#">🅴 Drake,Teezo Touchdown</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <footer>
+      <div class="footer">
+        <div class="footer-left">
+          <div class="footer-left-image-container">
+            <img
+              class="active-song-footer-image"
+              src="/images/album-covers/for-all-the-dogs.jpg"
+              alt=""
+            />
+            <button class="collapse-right-sidebar-button">
+              <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+                <path
+                  d="M.47 4.97a.75.75 0 0 1 1.06 0L8 11.44l6.47-6.47a.75.75 0 1 1 1.06 1.06L8 13.56.47 6.03a.75.75 0 0 1 0-1.06z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+
+          <div class="footer-current-song">
+            <a href="#" id="current-song-title">Virginia Beach</a>
+            <a href="#" id="current-song-performers">Drake</a>
+          </div>
+          <button>
+            <svg><use xlink:href="#add-to-liked-icon"></use></svg>
+          </button>
+        </div>
+        <div class="footer-middle">
+          <div class="audio-controls">
+            <div class="left-side-controls">
+              <button class="shuffle">
+                <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+                  <path
+                    d="M13.151.922a.75.75 0 1 0-1.06 1.06L13.109 3H11.16a3.75 3.75 0 0 0-2.873 1.34l-6.173 7.356A2.25 2.25 0 0 1 .39 12.5H0V14h.391a3.75 3.75 0 0 0 2.873-1.34l6.173-7.356a2.25 2.25 0 0 1 1.724-.804h1.947l-1.017 1.018a.75.75 0 0 0 1.06 1.06L15.98 3.75 13.15.922zM.391 3.5H0V2h.391c1.109 0 2.16.49 2.873 1.34L4.89 5.277l-.979 1.167-1.796-2.14A2.25 2.25 0 0 0 .39 3.5z"
+                  ></path>
+                  <path
+                    d="m7.5 10.723.98-1.167.957 1.14a2.25 2.25 0 0 0 1.724.804h1.947l-1.017-1.018a.75.75 0 1 1 1.06-1.06l2.829 2.828-2.829 2.828a.75.75 0 1 1-1.06-1.06L13.109 13H11.16a3.75 3.75 0 0 1-2.873-1.34l-.787-.938z"
+                  ></path>
+                </svg>
+              </button>
+              <button class="previous">
+                <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+                  <path
+                    d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7h1.6z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="play-control-button">
+              <button class="pause-play-button" id="pause-play-button">
+                <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+                  <path
+                    d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288V1.713z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+            <div class="right-side-controls">
+              <button class="next-button">
+                <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+                  <path
+                    d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7h-1.6z"
+                  ></path>
+                </svg>
+              </button>
+              <button id="repeat-button" class="repeat-button audio-active">
+                <svg
+                  class="audio-active"
+                  id="repeat-icon"
+                  role="img"
+                  aria-hidden="true"
+                  viewBox="0 0 16 16"
+                >
+                  <path
+                    d="M0 4.75A3.75 3.75 0 0 1 3.75 1h8.5A3.75 3.75 0 0 1 16 4.75v5a3.75 3.75 0 0 1-3.75 3.75H9.81l1.018 1.018a.75.75 0 1 1-1.06 1.06L6.939 12.75l2.829-2.828a.75.75 0 1 1 1.06 1.06L9.811 12h2.439a2.25 2.25 0 0 0 2.25-2.25v-5a2.25 2.25 0 0 0-2.25-2.25h-8.5A2.25 2.25 0 0 0 1.5 4.75v5A2.25 2.25 0 0 0 3.75 12H5v1.5H3.75A3.75 3.75 0 0 1 0 9.75v-5z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <audio id="audio-player"></audio>
+          <div class="audio-progress">
+            <div class="current-song-progress">0:00</div>
+            <div class="progress-bar-container">
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+                <div class="progress-circle"></div>
+              </div>
+            </div>
+            <div class="total-duration">4:11</div>
+          </div>
+        </div>
+        <div class="footer-right">
+          <button id="trigger-now-playing-view">
+            <svg
+              class="audio-active button-svg"
+              role="img"
+              aria-hidden="true"
+              viewBox="0 0 16 16"
+            >
+              <path d="M11.196 8 6 5v6l5.196-3z"></path>
+              <path
+                d="M15.002 1.75A1.75 1.75 0 0 0 13.252 0h-10.5a1.75 1.75 0 0 0-1.75 1.75v12.5c0 .966.783 1.75 1.75 1.75h10.5a1.75 1.75 0 0 0 1.75-1.75V1.75zm-1.75-.25a.25.25 0 0 1 .25.25v12.5a.25.25 0 0 1-.25.25h-10.5a.25.25 0 0 1-.25-.25V1.75a.25.25 0 0 1 .25-.25h10.5z"
+              ></path>
+            </svg></button
+          ><button>
+            <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+              <path
+                d="M13.426 2.574a2.831 2.831 0 0 0-4.797 1.55l3.247 3.247a2.831 2.831 0 0 0 1.55-4.797zM10.5 8.118l-2.619-2.62A63303.13 63303.13 0 0 0 4.74 9.075L2.065 12.12a1.287 1.287 0 0 0 1.816 1.816l3.06-2.688 3.56-3.129zM7.12 4.094a4.331 4.331 0 1 1 4.786 4.786l-3.974 3.493-3.06 2.689a2.787 2.787 0 0 1-3.933-3.933l2.676-3.045 3.505-3.99z"
+              ></path>
+            </svg></button
+          ><button>
+            <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+              <path
+                d="M15 15H1v-1.5h14V15zm0-4.5H1V9h14v1.5zm-14-7A2.5 2.5 0 0 1 3.5 1h9a2.5 2.5 0 0 1 0 5h-9A2.5 2.5 0 0 1 1 3.5zm2.5-1a1 1 0 0 0 0 2h9a1 1 0 1 0 0-2h-9z"
+              ></path>
+            </svg></button
+          ><button>
+            <svg role="img" aria-hidden="true" viewBox="0 0 16 16">
+              <path
+                d="M6 2.75C6 1.784 6.784 1 7.75 1h6.5c.966 0 1.75.784 1.75 1.75v10.5A1.75 1.75 0 0 1 14.25 15h-6.5A1.75 1.75 0 0 1 6 13.25V2.75zm1.75-.25a.25.25 0 0 0-.25.25v10.5c0 .138.112.25.25.25h6.5a.25.25 0 0 0 .25-.25V2.75a.25.25 0 0 0-.25-.25h-6.5zm-6 0a.25.25 0 0 0-.25.25v6.5c0 .138.112.25.25.25H4V11H1.75A1.75 1.75 0 0 1 0 9.25v-6.5C0 1.784.784 1 1.75 1H4v1.5H1.75zM4 15H2v-1.5h2V15z"
+              ></path>
+              <path
+                d="M13 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm-1-5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+              ></path>
+            </svg></button
+          ><button class="volume-control-btn">
+            <svg
+              role="presentation"
+              aria-hidden="false"
+              id="volume-icon-on"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M9.741.85a.75.75 0 0 1 .375.65v13a.75.75 0 0 1-1.125.65l-6.925-4a3.642 3.642 0 0 1-1.33-4.967 3.639 3.639 0 0 1 1.33-1.332l6.925-4a.75.75 0 0 1 .75 0zm-6.924 5.3a2.139 2.139 0 0 0 0 3.7l5.8 3.35V2.8l-5.8 3.35zm8.683 6.087a4.502 4.502 0 0 0 0-8.474v1.65a2.999 2.999 0 0 1 0 5.175v1.649z"
+              ></path>
+            </svg>
+            <svg
+              role="presentation"
+              aria-label="Volume off"
+              aria-hidden="false"
+              id="volume-icon-off"
+              class="hidden"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M13.86 5.47a.75.75 0 0 0-1.061 0l-1.47 1.47-1.47-1.47A.75.75 0 0 0 8.8 6.53L10.269 8l-1.47 1.47a.75.75 0 1 0 1.06 1.06l1.47-1.47 1.47 1.47a.75.75 0 0 0 1.06-1.06L12.39 8l1.47-1.47a.75.75 0 0 0 0-1.06z"
+              ></path>
+              <path
+                d="M10.116 1.5A.75.75 0 0 0 8.991.85l-6.925 4a3.642 3.642 0 0 0-1.33 4.967 3.639 3.639 0 0 0 1.33 1.332l6.925 4a.75.75 0 0 0 1.125-.649v-1.906a4.73 4.73 0 0 1-1.5-.694v1.3L2.817 9.852a2.141 2.141 0 0 1-.781-2.92c.187-.324.456-.594.78-.782l5.8-3.35v1.3c.45-.313.956-.55 1.5-.694V1.5z"
+              ></path>
+            </svg>
+          </button>
+          <div class="volume-container">
+            <div class="volume-bar">
+              <div class="volume-fill"></div>
+              <div class="volume-level-circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/main.js" defer></script>
+    <script src="js/color-thief.min.js" defer></script>
+    <script src="js/playlist-background-color.js" defer></script>
+    <script src="js/audio.js" defer></script>
+    <script src="js/sidebars.js" defer></script>
+    <script src="js/playlists.js" defer></script>
+  </body>
+</html>
